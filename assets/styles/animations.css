@@ -1,0 +1,61 @@
+/* Definimos la animación */
+@keyframes jump {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+}
+
+@keyframes grow {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move-side {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100px);
+    }
+}
+
+.mario-jump {
+    animation: jump 2s ease-in-out 3;
+    /* 3 brincos */
+}
+
+.mario-spin {
+    animation: spin 2s linear infinite;
+}
+
+.mario-move {
+    animation: move-side 2s ease-in-out infinite;
+}
+
+.mario-combo {
+    animation: grow 2s ease-in-out infinite;
+}

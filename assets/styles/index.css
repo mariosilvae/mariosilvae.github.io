@@ -1,21 +1,14 @@
 .header {
     color: tomato;
     text-align: center;
-    padding-bottom: 20;
+    padding: 10px;
 }
 
 
 .info_bullets {
     display: flex;
     justify-content: center;
-}
-
-body {
-    font-family: monospace;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgb(219, 247, 255) 0%, rgba(0,212,255,1) 100%);
-    display: flex;
-    flex-direction: column;
+    text-align: left;
 }
 
 .video {
@@ -92,69 +85,10 @@ body {
   position: relative; /* Para permitir la animación */
 }
 
-/* Definimos la animación */
-@keyframes jump {
-  0%, 100% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(-40px);
-  }
-}
-
-@keyframes grow {
-
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes move-side {
-
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(100px);
-  }
-}
-
-.mario-jump {
-  animation: jump 2s ease-in-out 3; /* 3 brincos */
-}
-
-.mario-combo {
-  animation: grow 2s ease-in-out infinite;
-}
-
-.mario-spin {
-  animation: spin 2s linear infinite;
-}
-
-.mario-move {
-  animation: move-side 2s ease-in-out infinite;
-}
-
 .service_content {
   margin: 10;
   padding: 10;
+  text-align: left;
 }
 
 footer {
@@ -214,4 +148,185 @@ td, th {
 .css-animations h3 {
   padding-bottom: 40px;
   color: tomato;
+}
+
+body {
+  font-family: monospace;
+  background: linear-gradient(0deg, rgb(219, 247, 255) 0%, rgba(0, 212, 255, 1) 100%);
+  color: #333;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.mario_action {
+  width: 100px;
+  margin: 20px 0;
+}
+
+button {
+  background: #FF6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #32CD32;
+  /* Verde Luigi */
+}
+
+.card_title {
+  margin-bottom: 10px;
+  color: tomato;
+}
+
+.php-container {
+  background: linear-gradient(0deg, rgba(255, 154, 154, 1) 0%, rgba(255, 99, 77, 1) 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 20px;
+}
+
+.php-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.php-container p {
+  margin-bottom: 20px;
+}
+
+.php-card {
+  background: white;
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.php-card:hover {
+  transform: scale(1.02);
+}
+
+pre {
+  background: #282A36;
+  color: #F8F8F2;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Sección principal */
+.usabilidad-container {
+  background: linear-gradient(0deg, rgba(255, 154, 154, 1) 0%, rgba(255, 99, 77, 1) 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 20px;
+}
+
+/* Tarjetas (Principios de UX) */
+.usabilidad-card {
+  background: white;
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  transition: transform 0.3s ease;
+}
+
+.usabilidad-card:hover {
+  transform: scale(1.02);
+}
+
+/* Interacciones (Buena y Mala UX) */
+.ux-interactivo {
+  margin-top: 2rem;
+}
+
+/* Botón de Buena UX */
+#good-ux-button {
+  background: #2196F3;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#good-ux-button:hover {
+  background: #1976D2;
+}
+
+/* Botón de Mala UX */
+.bad-ux button {
+  background: #FF5722;
+  color: black;
+  /* Mala legibilidad a propósito */
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  /* Texto confuso */
+  border-radius: 0;
+  /* Sin bordes suaves */
+}
+
+.bad-ux button:hover {
+  background: #F44336;
+}
+
+/* Animación para mostrar feedback */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#good-ux-feedback,
+#bad-ux-feedback {
+  margin-top: 1rem;
+  animation: fadeIn 0.5s ease-in-out;
 }

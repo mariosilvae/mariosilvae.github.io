@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles/index.css">
+    <script src="/scripts/index.js"></script>
+    <title>JavaScript</title>
+</head>
+<body>
+        <!-- Top Navigation Bar --->
+    <div class="topnav">
+        <a href="/index.html">Inicio</a>
+        <a href="/pages/service_architecture.html">Arquitectura de servicios</a>
+        <a href="/pages/markup_lenguage.html">Lenguaje de marcas</a>
+        <a href="/pages/css3.html">CSS3</a>
+        <a href="/pages/usability.html">Usabilidad</a>
+        <a class="active" href="/pages/javascript.html">JavaScript</a>
+        <a href="/pages/php.html">PHP</a>
+    </div>
+
+    <h1 class="header">JavaScript (JS)</h1>
+
+    <p>JavaScript es un lenguaje de programación multiplataforma orientado a objetos que se utiliza para hacer que las páginas
+    web sean interactivas (p. ej., Que tienen animaciones complejas, botones en los que se puede hacer clic, menús
+    emergentes, etc.). También hay versiones de JavaScript de lado del servidor más avanzadas, como Node.js, que te permiten
+    agregar más funcionalidad a un sitio web que simplemente descargar archivos (como la colaboración en tiempo real entre
+    varias computadoras). Dentro de un entorno (por ejemplo, un navegador web), JavaScript se puede conectar a los objetos
+    de su entorno para proporcionar control programático sobre ellos.</p>
+
+    <h1 class="header">¡Interacciones con Mario! 🍄</h1>
+
+    <div class="container">
+
+        <!-- Card 1: Mostrar/Ocultar Mario -->
+        <div class="card">
+            <h2 class="card_title">¿Dónde está Mario?</h2>
+            <img class="mario_action" id="mario_action" src="/assets/images/mario_bros.jpg" alt="Mario" style="visibility: visible;">
+            <p>Haz clic en el botón para que Mario se esconda o aparezca.</p>
+            <button id="toggleButton" onclick="mostrarOcultar()">Ocultar</button>
+        </div>
+
+        <!-- Card 2: Cambiar el fondo -->
+        <div class="card">
+            <h2 class="card_title">Cambia el Mundo</h2>
+            <p>Presiona el botón y transforma el fondo de la página.</p>
+            <button onclick="cambiarColor()">Cambiar Fondo</button>
+        </div>
+
+        <!-- Card 3: Recolectar Estrellas -->
+        <div class="card">
+            <h2 class="card_title">¡Recolecta Estrellas! ⭐️</h2>
+            <div id="contenedor"></div>
+            <button onclick="agregarEstrella()">¡Conseguir Estrella!</button>
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
